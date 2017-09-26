@@ -11,6 +11,7 @@ import UIKit
 class WebsiteDetailViewController: UIViewController {
   @IBOutlet var nameField: UITextField!
   @IBOutlet var urlField: UITextField!
+  @IBOutlet var visitSiteButton: UIButton!
   
   var website: Website! {
     didSet {
@@ -26,9 +27,13 @@ class WebsiteDetailViewController: UIViewController {
       nameField.text = websiteName
     }
     
-    if let websiteUrl = website.url {
+    if let websiteUrl = website.url, websiteUrl.absoluteString != "" && websiteUrl.absoluteString != "www.example.com" {
       urlField.text = websiteUrl.absoluteString
+      visitSiteButton.isHidden = false
+    } else {
+      visitSiteButton.isHidden = true
     }
+    
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -43,6 +48,16 @@ class WebsiteDetailViewController: UIViewController {
       }
     } else {
       websiteStore.removeWebsite(website)
+    }
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier {
+    case "ShowWebsite"?:
+      let websiteViewController = segue.destination as! WebsiteViewController
+      websiteViewController.website = website
+    default:
+      preconditionFailure("Unexpected segues identifier")
     }
   }
   

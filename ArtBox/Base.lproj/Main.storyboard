@@ -134,7 +134,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ea9-jy-WCr">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ea9-jy-WCr">
                                         <rect key="frame" x="58" y="0.0" width="269" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -159,15 +159,25 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iok-Zl-ANd">
+                                <rect key="frame" x="141" y="156" width="93" height="30"/>
+                                <state key="normal" title="View Website"/>
+                                <connections>
+                                    <segue destination="CCe-Y5-7Dd" kind="show" identifier="ShowWebsite" id="Oow-nH-e8e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ZM3-Gi-X6H" secondAttribute="trailing" constant="8" id="52j-dZ-bth"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iok-Zl-ANd" secondAttribute="trailing" constant="125" id="JGQ-G4-hT9"/>
                             <constraint firstItem="TrK-1o-HTP" firstAttribute="leading" secondItem="Pf8-Yh-lcf" secondAttribute="leading" id="YA4-cj-f3c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k2p-Jr-Pcb" secondAttribute="trailing" constant="8" id="aE9-It-sdT"/>
                             <constraint firstItem="k2p-Jr-Pcb" firstAttribute="leading" secondItem="szS-SB-AmH" secondAttribute="leadingMargin" constant="8" id="cOS-de-AER"/>
                             <constraint firstItem="OfQ-c2-9AY" firstAttribute="leading" secondItem="Ea9-jy-WCr" secondAttribute="leading" id="cw7-UZ-fXA"/>
+                            <constraint firstItem="iok-Zl-ANd" firstAttribute="top" secondItem="ZM3-Gi-X6H" secondAttribute="bottom" constant="16" id="hov-Ta-fIi"/>
                             <constraint firstItem="ZM3-Gi-X6H" firstAttribute="top" secondItem="k2p-Jr-Pcb" secondAttribute="bottom" constant="8" id="tA2-hw-qrG"/>
+                            <constraint firstItem="iok-Zl-ANd" firstAttribute="leading" secondItem="szS-SB-AmH" secondAttribute="leadingMargin" constant="125" id="tK3-X8-rW8"/>
                             <constraint firstItem="ZM3-Gi-X6H" firstAttribute="leading" secondItem="szS-SB-AmH" secondAttribute="leadingMargin" constant="8" id="xZl-3O-TMj"/>
                             <constraint firstItem="k2p-Jr-Pcb" firstAttribute="top" secondItem="sZt-5H-L8j" secondAttribute="bottom" constant="8" id="xhe-Xe-reO"/>
                         </constraints>
@@ -176,11 +186,30 @@
                     <connections>
                         <outlet property="nameField" destination="OfQ-c2-9AY" id="KV4-R4-hk2"/>
                         <outlet property="urlField" destination="Ea9-jy-WCr" id="Ara-TL-cWE"/>
+                        <outlet property="visitSiteButton" destination="iok-Zl-ANd" id="IpB-ib-eTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wov-u8-Guu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2916" y="836"/>
+        </scene>
+        <!--Website View Controller-->
+        <scene sceneID="bnB-cx-qyZ">
+            <objects>
+                <viewController id="CCe-Y5-7Dd" customClass="WebsiteViewController" customModule="ArtBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="de1-8L-oeC"/>
+                        <viewControllerLayoutGuide type="bottom" id="ALe-zs-qVu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6vC-bd-z4A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7p-hd-xM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3775" y="836"/>
         </scene>
         <!--Title-->
         <scene sceneID="Zsc-Be-f42">
@@ -323,7 +352,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4X-ih-tFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="102.99850074962519"/>
+            <point key="canvasLocation" x="126" y="458"/>
         </scene>
         <!--Websites-->
         <scene sceneID="xof-a5-WLm">

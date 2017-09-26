@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9541D6981F7AD88C00531ABE /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541D6971F7AD88C00531ABE /* WebsiteViewController.swift */; };
 		956C3E9D1F7950620086A76C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3E9C1F7950620086A76C /* AppDelegate.swift */; };
 		956C3EA21F7950620086A76C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956C3EA01F7950620086A76C /* Main.storyboard */; };
 		956C3EA51F7950620086A76C /* ArtBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EA31F7950620086A76C /* ArtBox.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9541D6971F7AD88C00531ABE /* WebsiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
 		956C3E991F7950620086A76C /* ArtBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956C3E9C1F7950620086A76C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		956C3EA11F7950620086A76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				956C3EBE1F7ABF6C0086A76C /* Website.swift */,
 				956C3EC01F7AC46B0086A76C /* WebsiteStore.swift */,
 				956C3EC21F7ACDF90086A76C /* WebsiteDetailViewController.swift */,
+				9541D6971F7AD88C00531ABE /* WebsiteViewController.swift */,
 			);
 			path = ArtBox;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				956C3EB41F7951980086A76C /* Supply.swift in Sources */,
 				956C3EC31F7ACDF90086A76C /* WebsiteDetailViewController.swift in Sources */,
 				956C3EBF1F7ABF6C0086A76C /* Website.swift in Sources */,
+				9541D6981F7AD88C00531ABE /* WebsiteViewController.swift in Sources */,
 				956C3E9D1F7950620086A76C /* AppDelegate.swift in Sources */,
 				956C3EB81F7993720086A76C /* SupplyDetailViewController.swift in Sources */,
 				956C3EBD1F7ABEA00086A76C /* WebsitesViewController.swift in Sources */,
