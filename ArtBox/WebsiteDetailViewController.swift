@@ -19,6 +19,7 @@ class WebsiteDetailViewController: UIViewController {
     }
   }
   var websiteStore: WebsiteStore!
+  var favoriteStore: FavoriteStore!
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -56,6 +57,7 @@ class WebsiteDetailViewController: UIViewController {
     case "ShowWebsite"?:
       let websiteViewController = segue.destination as! WebsiteViewController
       websiteViewController.website = website
+      websiteViewController.favoriteStore = favoriteStore
     default:
       preconditionFailure("Unexpected segues identifier")
     }

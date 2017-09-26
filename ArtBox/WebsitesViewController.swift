@@ -10,6 +10,7 @@ import UIKit
 
 class WebsitesViewController: UITableViewController {
   var websiteStore: WebsiteStore!
+  var favoriteStore: FavoriteStore!
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -48,6 +49,7 @@ class WebsitesViewController: UITableViewController {
       let websiteDetailViewController = segue.destination as! WebsiteDetailViewController
       websiteDetailViewController.website = website
       websiteDetailViewController.websiteStore = websiteStore
+      websiteDetailViewController.favoriteStore = favoriteStore
     case "UpdateWebsite"?:
       let website: Website
       if let indexPath = tableView.indexPathForSelectedRow {
@@ -55,6 +57,7 @@ class WebsitesViewController: UITableViewController {
         let websiteDetailViewController = segue.destination as! WebsiteDetailViewController
         websiteDetailViewController.website = website
         websiteDetailViewController.websiteStore = websiteStore
+        websiteDetailViewController.favoriteStore = favoriteStore
       }
     default:
       preconditionFailure("Unexpected segues identifier.")

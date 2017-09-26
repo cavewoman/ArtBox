@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let supplyStore = SupplyStore()
   let supplyImageStore = SupplyImageStore()
   let websiteStore = WebsiteStore()
+  let favoriteStore = FavoriteStore()
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let suppliesNavController = tabController.viewControllers?[0] as! UINavigationController
     let websitesNavController = tabController.viewControllers?[1] as! UINavigationController
+    let favoritesNavController = tabController.viewControllers?[2] as! UINavigationController
     
     let suppliesViewController = suppliesNavController.topViewController as! SuppliesViewController
     suppliesViewController.supplyStore = supplyStore
@@ -32,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let websitesViewController = websitesNavController.topViewController as! WebsitesViewController
     websitesViewController.websiteStore = websiteStore
+    websitesViewController.favoriteStore = favoriteStore
+    
+    let favoritesViewController = favoritesNavController.topViewController as! FavoritesViewController
+    favoritesViewController.favoriteStore = favoriteStore
     
     return true
   }

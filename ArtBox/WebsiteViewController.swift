@@ -16,12 +16,22 @@ class WebsiteViewController: UIViewController {
     }
   }
   var webView: WKWebView!
+  var favoriteStore: FavoriteStore!
+  
+  @IBAction func favoriteButtonClicked(_ sender: UIBarButtonItem) {
+    var favoriteName: String
+    if let websiteTitle = self.webView.title, websiteTitle != "" {
+      favoriteName = websiteTitle
+    } else {
+      favoriteName = website.name!
+    }
+    self.favoriteStore.createFavorite(name: favoriteName, url: self.webView.url!, websiteKey: website.websiteKey!, websiteName: website.name!)
+  }
   
   override func viewDidLoad() {
     webView = WKWebView()
     view = webView
     
-//    let myRequest = URLRequest(url: URL(string: "https://www.instagram.com")!)
     let myRequest = URLRequest(url: website.url!)
     webView.load(myRequest)
   }
