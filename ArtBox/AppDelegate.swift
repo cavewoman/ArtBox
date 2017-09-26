@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    let suppliesNavController = window?.rootViewController as! UINavigationController
+    let tabController = window?.rootViewController as! UITabBarController
+    
+    let suppliesNavController = tabController.viewControllers?[0] as! UINavigationController
     
     let suppliesViewController = suppliesNavController.topViewController as! SuppliesViewController
     suppliesViewController.supplyStore = supplyStore

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kr4-g7-AzW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mQV-o9-IIV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -63,7 +63,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UpN-GA-bR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103.2" y="102.99850074962519"/>
+            <point key="canvasLocation" x="2042.4000000000001" y="102.99850074962519"/>
         </scene>
         <!--Supply Detail View Controller-->
         <scene sceneID="Zsc-Be-f42">
@@ -131,12 +131,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkr-P1-Wuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.8" y="102.99850074962519"/>
+            <point key="canvasLocation" x="2916" y="102.99850074962519"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Supplies-->
         <scene sceneID="oQe-aM-vbK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kr4-g7-AzW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Supplies" image="icons8-Paint Brush-25" id="SJv-bT-nwZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GQB-lb-Lqp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -149,9 +150,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBF-MW-2UQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1103.2" y="102.99850074962519"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kmD-71-XpB">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mQV-o9-IIV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Jfb-iz-vzi">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kr4-g7-AzW" kind="relationship" relationship="viewControllers" id="BPx-hL-CvA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4X-ih-tFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="164" y="102.99850074962519"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Paint Brush-25" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pFF-3C-xnD"/>
     </inferredMetricsTieBreakers>
