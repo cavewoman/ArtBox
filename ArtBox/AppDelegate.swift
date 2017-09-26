@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   let supplyStore = SupplyStore()
   let supplyImageStore = SupplyImageStore()
+  let websiteStore = WebsiteStore()
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -23,10 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let tabController = window?.rootViewController as! UITabBarController
     
     let suppliesNavController = tabController.viewControllers?[0] as! UINavigationController
+    let websitesNavController = tabController.viewControllers?[1] as! UINavigationController
     
     let suppliesViewController = suppliesNavController.topViewController as! SuppliesViewController
     suppliesViewController.supplyStore = supplyStore
     suppliesViewController.supplyImageStore = supplyImageStore
+    
+    let websitesViewController = websitesNavController.topViewController as! WebsitesViewController
+    websitesViewController.websiteStore = websiteStore
     
     return true
   }
