@@ -10,6 +10,7 @@ import UIKit
 
 class SuppliesViewController: UITableViewController {
   var supplyStore: SupplyStore!
+  var supplyImageStore: SupplyImageStore!
   
   enum SupplyAmount {
     case moreThanHalfFull
@@ -58,6 +59,7 @@ class SuppliesViewController: UITableViewController {
       let supplyDetailViewController = segue.destination as! SupplyDetailViewController
       supplyDetailViewController.supply = supply
       supplyDetailViewController.supplyStore = supplyStore
+      supplyDetailViewController.supplyImageStore = supplyImageStore
     case "updateSupply"?:
       let supply: Supply
       if let indexPath = tableView.indexPathForSelectedRow {
@@ -65,6 +67,7 @@ class SuppliesViewController: UITableViewController {
         let supplyDetailViewController = segue.destination as! SupplyDetailViewController
         supplyDetailViewController.supply = supply
         supplyDetailViewController.supplyStore = supplyStore
+        supplyDetailViewController.supplyImageStore = supplyImageStore
       }
     default:
       preconditionFailure("Unexpected segues identifier.")

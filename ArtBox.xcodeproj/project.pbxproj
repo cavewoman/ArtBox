@@ -16,6 +16,7 @@
 		956C3EB41F7951980086A76C /* Supply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EB31F7951980086A76C /* Supply.swift */; };
 		956C3EB61F7953870086A76C /* SupplyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EB51F7953870086A76C /* SupplyStore.swift */; };
 		956C3EB81F7993720086A76C /* SupplyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EB71F7993720086A76C /* SupplyDetailViewController.swift */; };
+		956C3EBB1F7AA1320086A76C /* SupplyImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EBA1F7AA1320086A76C /* SupplyImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		956C3EB31F7951980086A76C /* Supply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supply.swift; sourceTree = "<group>"; };
 		956C3EB51F7953870086A76C /* SupplyStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplyStore.swift; sourceTree = "<group>"; };
 		956C3EB71F7993720086A76C /* SupplyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplyDetailViewController.swift; sourceTree = "<group>"; };
+		956C3EBA1F7AA1320086A76C /* SupplyImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplyImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +64,27 @@
 		956C3E9B1F7950620086A76C /* ArtBox */ = {
 			isa = PBXGroup;
 			children = (
+				956C3EB91F7AA0C80086A76C /* Supplies */,
 				956C3E9C1F7950620086A76C /* AppDelegate.swift */,
 				956C3EA01F7950620086A76C /* Main.storyboard */,
 				956C3EA61F7950620086A76C /* Assets.xcassets */,
 				956C3EA81F7950620086A76C /* LaunchScreen.storyboard */,
 				956C3EAB1F7950620086A76C /* Info.plist */,
 				956C3EA31F7950620086A76C /* ArtBox.xcdatamodeld */,
+			);
+			path = ArtBox;
+			sourceTree = "<group>";
+		};
+		956C3EB91F7AA0C80086A76C /* Supplies */ = {
+			isa = PBXGroup;
+			children = (
 				956C3EB11F7951280086A76C /* SuppliesViewController.swift */,
 				956C3EB31F7951980086A76C /* Supply.swift */,
 				956C3EB51F7953870086A76C /* SupplyStore.swift */,
 				956C3EB71F7993720086A76C /* SupplyDetailViewController.swift */,
+				956C3EBA1F7AA1320086A76C /* SupplyImageStore.swift */,
 			);
-			path = ArtBox;
+			name = Supplies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 				956C3E9D1F7950620086A76C /* AppDelegate.swift in Sources */,
 				956C3EB81F7993720086A76C /* SupplyDetailViewController.swift in Sources */,
 				956C3EB61F7953870086A76C /* SupplyStore.swift in Sources */,
+				956C3EBB1F7AA1320086A76C /* SupplyImageStore.swift in Sources */,
 				956C3EB21F7951280086A76C /* SuppliesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +332,7 @@
 				956C3EB01F7950620086A76C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

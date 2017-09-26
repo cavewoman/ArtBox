@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
   let supplyStore = SupplyStore()
+  let supplyImageStore = SupplyImageStore()
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let suppliesViewController = suppliesNavController.topViewController as! SuppliesViewController
     suppliesViewController.supplyStore = supplyStore
+    suppliesViewController.supplyImageStore = supplyImageStore
     
     return true
   }
