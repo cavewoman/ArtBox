@@ -13,6 +13,8 @@
 		9541D6A01F7AED9900531ABE /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541D69F1F7AED9900531ABE /* FavoritesViewController.swift */; };
 		9541D6A21F7AEDC200531ABE /* FavoriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541D6A11F7AEDC200531ABE /* FavoriteDetailViewController.swift */; };
 		9541D6A41F7AEDEF00531ABE /* FavoriteWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541D6A31F7AEDEF00531ABE /* FavoriteWebViewController.swift */; };
+		9541D6A61F7C192800531ABE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541D6A51F7C192800531ABE /* Category.swift */; };
+		9541D6A91F7C1AF800531ABE /* CategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541D6A81F7C1AF800531ABE /* CategoryStore.swift */; };
 		956C3E9D1F7950620086A76C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3E9C1F7950620086A76C /* AppDelegate.swift */; };
 		956C3EA21F7950620086A76C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956C3EA01F7950620086A76C /* Main.storyboard */; };
 		956C3EA51F7950620086A76C /* ArtBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EA31F7950620086A76C /* ArtBox.xcdatamodeld */; };
@@ -36,6 +38,8 @@
 		9541D69F1F7AED9900531ABE /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		9541D6A11F7AEDC200531ABE /* FavoriteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDetailViewController.swift; sourceTree = "<group>"; };
 		9541D6A31F7AEDEF00531ABE /* FavoriteWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteWebViewController.swift; sourceTree = "<group>"; };
+		9541D6A51F7C192800531ABE /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		9541D6A81F7C1AF800531ABE /* CategoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryStore.swift; sourceTree = "<group>"; };
 		956C3E991F7950620086A76C /* ArtBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956C3E9C1F7950620086A76C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		956C3EA11F7950620086A76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 			name = Favorites;
 			sourceTree = "<group>";
 		};
+		9541D6A71F7C1ADE00531ABE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9541D6A51F7C192800531ABE /* Category.swift */,
+				9541D6A81F7C1AF800531ABE /* CategoryStore.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		956C3E901F7950620086A76C = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +123,7 @@
 			children = (
 				956C3E9C1F7950620086A76C /* AppDelegate.swift */,
 				956C3EA01F7950620086A76C /* Main.storyboard */,
+				9541D6A71F7C1ADE00531ABE /* Categories */,
 				9541D69A1F7AE90B00531ABE /* Favorites */,
 				956C3EB91F7AA0C80086A76C /* Supplies */,
 				9541D6991F7AE8D600531ABE /* Websites */,
@@ -211,9 +225,11 @@
 				956C3EB41F7951980086A76C /* Supply.swift in Sources */,
 				9541D69C1F7AE95200531ABE /* Favorite.swift in Sources */,
 				956C3EC31F7ACDF90086A76C /* WebsiteDetailViewController.swift in Sources */,
+				9541D6A61F7C192800531ABE /* Category.swift in Sources */,
 				956C3EBF1F7ABF6C0086A76C /* Website.swift in Sources */,
 				9541D6981F7AD88C00531ABE /* WebsiteViewController.swift in Sources */,
 				956C3E9D1F7950620086A76C /* AppDelegate.swift in Sources */,
+				9541D6A91F7C1AF800531ABE /* CategoryStore.swift in Sources */,
 				956C3EB81F7993720086A76C /* SupplyDetailViewController.swift in Sources */,
 				956C3EBD1F7ABEA00086A76C /* WebsitesViewController.swift in Sources */,
 				956C3EB61F7953870086A76C /* SupplyStore.swift in Sources */,

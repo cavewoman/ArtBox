@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let supplyImageStore = SupplyImageStore()
   let websiteStore = WebsiteStore()
   let favoriteStore = FavoriteStore()
+  let categoryStore = CategoryStore()
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let suppliesViewController = suppliesNavController.topViewController as! SuppliesViewController
     suppliesViewController.supplyStore = supplyStore
     suppliesViewController.supplyImageStore = supplyImageStore
+    suppliesViewController.categoryStore = categoryStore
     
     let websitesViewController = websitesNavController.topViewController as! WebsitesViewController
     websitesViewController.websiteStore = websiteStore

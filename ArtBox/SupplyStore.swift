@@ -23,14 +23,14 @@ class SupplyStore {
     }
   }
   
-  @discardableResult func createSupply(name: String, amount: Double) -> Supply {
-    let newSupply = Supply(name: name, amount: amount)
+  @discardableResult func createSupply(name: String, amount: Double, categoryName: String) -> Supply {
+    let newSupply = Supply(name: name, amount: amount, categoryName: categoryName)
     allSupplies.append(newSupply)
     return newSupply
   }
   
-  @discardableResult func createSupply(name: String, amount: Double, supplyKey: String) -> Supply {
-    let newSupply = Supply(name: name, amount: amount, supplyKey: supplyKey)
+  @discardableResult func createSupply(name: String, amount: Double, categoryName: String, supplyKey: String) -> Supply {
+    let newSupply = Supply(name: name, amount: amount, categoryName: categoryName, supplyKey: supplyKey)
     allSupplies.append(newSupply)
     return newSupply
   }
