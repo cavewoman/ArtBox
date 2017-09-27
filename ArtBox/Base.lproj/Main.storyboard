@@ -338,7 +338,13 @@
                             <constraint firstItem="k2p-Jr-Pcb" firstAttribute="top" secondItem="sZt-5H-L8j" secondAttribute="bottom" constant="8" id="xhe-Xe-reO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="SIW-sE-bUg"/>
+                    <navigationItem key="navigationItem" title="Title" id="SIW-sE-bUg">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-Save-25" id="XD7-ET-wPZ">
+                            <connections>
+                                <action selector="saveWebsite:" destination="PvJ-bV-Mbd" id="Rrd-WV-4Ur"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameField" destination="OfQ-c2-9AY" id="KV4-R4-hk2"/>
                         <outlet property="urlField" destination="Ea9-jy-WCr" id="Ara-TL-cWE"/>

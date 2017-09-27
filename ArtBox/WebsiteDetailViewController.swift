@@ -13,6 +13,20 @@ class WebsiteDetailViewController: UIViewController {
   @IBOutlet var urlField: UITextField!
   @IBOutlet var visitSiteButton: UIButton!
   
+  @IBAction func saveWebsite(_ sender: UIBarButtonItem) {
+    if let enteredName = nameField.text, enteredName != "" {
+      website.name = nameField.text
+    }
+    
+    if let enteredURL = urlField.text, enteredURL != "" {
+      website.url = URL(string: enteredURL)
+      visitSiteButton.isHidden = false
+    } else {
+      visitSiteButton.isHidden = true
+    }
+    
+  }
+  
   var website: Website! {
     didSet {
       navigationItem.title = website.name
