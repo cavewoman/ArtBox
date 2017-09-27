@@ -19,6 +19,16 @@ class SupplyDetailViewController: UIViewController, UITextFieldDelegate, UINavig
   @IBOutlet var cameraButton: UIBarButtonItem!
   @IBOutlet var uploadPhotoButton: UIBarButtonItem!
   
+  @IBAction func saveSupply(_ sender: UIBarButtonItem) {
+    if let enteredName = nameField.text, enteredName != "" {
+      supply.name = nameField.text
+    }
+    
+    if let enteredAmount = amountField.text, enteredAmount != "" {
+      supply.amount = Double(enteredAmount) ?? 0.0
+    }
+  }
+  
   @IBAction func takePicture(_ sender: UIBarButtonItem) {
     let imagePicker = UIImagePickerController()
     

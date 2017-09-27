@@ -440,10 +440,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="e9C-V4-tmY" secondAttribute="trailing" constant="8" id="AZk-wh-JuL"/>
                             <constraint firstItem="daO-zp-C5x" firstAttribute="leading" secondItem="pM3-to-Mnz" secondAttribute="leadingMargin" constant="8" id="AaE-ip-Ege"/>
                             <constraint firstItem="e9C-V4-tmY" firstAttribute="top" secondItem="25l-Aj-9kf" secondAttribute="bottom" constant="8" id="DFW-K2-KUW"/>
-                            <constraint firstItem="eHd-dg-2ak" firstAttribute="leading" secondItem="pM3-to-Mnz" secondAttribute="leadingMargin" constant="121" id="GfD-1D-q6h"/>
                             <constraint firstItem="e9C-V4-tmY" firstAttribute="leading" secondItem="pM3-to-Mnz" secondAttribute="leadingMargin" constant="8" id="M7W-hw-b9z"/>
                             <constraint firstItem="Wct-4O-eQB" firstAttribute="top" secondItem="GkO-XD-1AV" secondAttribute="bottom" constant="22" id="Tfc-hv-f33"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eHd-dg-2ak" secondAttribute="trailing" constant="121" id="cwL-wS-PXC"/>
+                            <constraint firstItem="eHd-dg-2ak" firstAttribute="centerX" secondItem="pM3-to-Mnz" secondAttribute="centerX" id="g7R-Cr-vlt"/>
                             <constraint firstItem="eHd-dg-2ak" firstAttribute="top" secondItem="daO-zp-C5x" secondAttribute="bottom" constant="19" id="jId-yX-hzB"/>
                             <constraint firstItem="GkO-XD-1AV" firstAttribute="leading" secondItem="pM3-to-Mnz" secondAttribute="leadingMargin" constant="29" id="n9O-il-5dI"/>
                             <constraint firstItem="daO-zp-C5x" firstAttribute="top" secondItem="e9C-V4-tmY" secondAttribute="bottom" constant="8" id="tKg-qd-488"/>
@@ -453,6 +452,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="aaN-5d-rXk">
                         <rightBarButtonItems>
+                            <barButtonItem image="icons8-Save-25" id="GHF-Ki-Y9F">
+                                <connections>
+                                    <action selector="saveSupply:" destination="djI-m5-z31" id="KI1-Um-Ft2"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="action" id="alH-Ah-Vd8">
                                 <connections>
                                     <action selector="uploadPicture:" destination="djI-m5-z31" id="NS2-TI-Px7"/>
@@ -561,6 +565,7 @@
         <image name="icons8-Paint Brush-25" width="25" height="25"/>
         <image name="icons8-Paint Palette-25" width="25" height="25"/>
         <image name="icons8-Paint Palette-30" width="30" height="30"/>
+        <image name="icons8-Save-25" width="25" height="25"/>
         <image name="icons8-Web-25" width="25" height="25"/>
         <image name="icons8-Web-35" width="35" height="35"/>
     </resources>
