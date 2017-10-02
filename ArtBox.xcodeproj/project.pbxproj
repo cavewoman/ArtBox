@@ -29,6 +29,10 @@
 		956C3EBF1F7ABF6C0086A76C /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EBE1F7ABF6C0086A76C /* Website.swift */; };
 		956C3EC11F7AC46B0086A76C /* WebsiteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EC01F7AC46B0086A76C /* WebsiteStore.swift */; };
 		956C3EC31F7ACDF90086A76C /* WebsiteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C3EC21F7ACDF90086A76C /* WebsiteDetailViewController.swift */; };
+		95BC0F3D1F82BD0200577144 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC0F3C1F82BD0200577144 /* Project.swift */; };
+		95BC0F401F82C02500577144 /* ProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC0F3F1F82C02500577144 /* ProjectStore.swift */; };
+		95BC0F421F82C4D100577144 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC0F411F82C4D100577144 /* ProjectsViewController.swift */; };
+		95BC0F441F82C9D300577144 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC0F431F82C9D300577144 /* ProjectDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		956C3EBE1F7ABF6C0086A76C /* Website.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Website.swift; sourceTree = "<group>"; };
 		956C3EC01F7AC46B0086A76C /* WebsiteStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteStore.swift; sourceTree = "<group>"; };
 		956C3EC21F7ACDF90086A76C /* WebsiteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteDetailViewController.swift; sourceTree = "<group>"; };
+		95BC0F3C1F82BD0200577144 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		95BC0F3F1F82C02500577144 /* ProjectStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectStore.swift; sourceTree = "<group>"; };
+		95BC0F411F82C4D100577144 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		95BC0F431F82C9D300577144 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,7 @@
 			children = (
 				956C3E9C1F7950620086A76C /* AppDelegate.swift */,
 				956C3EA01F7950620086A76C /* Main.storyboard */,
+				95BC0F3E1F82BFFE00577144 /* Projects */,
 				9541D6A71F7C1ADE00531ABE /* Categories */,
 				9541D69A1F7AE90B00531ABE /* Favorites */,
 				956C3EB91F7AA0C80086A76C /* Supplies */,
@@ -145,6 +154,17 @@
 				956C3EBA1F7AA1320086A76C /* SupplyImageStore.swift */,
 			);
 			name = Supplies;
+			sourceTree = "<group>";
+		};
+		95BC0F3E1F82BFFE00577144 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				95BC0F3C1F82BD0200577144 /* Project.swift */,
+				95BC0F3F1F82C02500577144 /* ProjectStore.swift */,
+				95BC0F411F82C4D100577144 /* ProjectsViewController.swift */,
+				95BC0F431F82C9D300577144 /* ProjectDetailViewController.swift */,
+			);
+			name = Projects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,13 +242,17 @@
 			files = (
 				956C3EA51F7950620086A76C /* ArtBox.xcdatamodeld in Sources */,
 				9541D69E1F7AEAFA00531ABE /* FavoriteStore.swift in Sources */,
+				95BC0F421F82C4D100577144 /* ProjectsViewController.swift in Sources */,
 				956C3EB41F7951980086A76C /* Supply.swift in Sources */,
+				95BC0F3D1F82BD0200577144 /* Project.swift in Sources */,
 				9541D69C1F7AE95200531ABE /* Favorite.swift in Sources */,
 				956C3EC31F7ACDF90086A76C /* WebsiteDetailViewController.swift in Sources */,
+				95BC0F441F82C9D300577144 /* ProjectDetailViewController.swift in Sources */,
 				9541D6A61F7C192800531ABE /* Category.swift in Sources */,
 				956C3EBF1F7ABF6C0086A76C /* Website.swift in Sources */,
 				9541D6981F7AD88C00531ABE /* WebsiteViewController.swift in Sources */,
 				956C3E9D1F7950620086A76C /* AppDelegate.swift in Sources */,
+				95BC0F401F82C02500577144 /* ProjectStore.swift in Sources */,
 				9541D6A91F7C1AF800531ABE /* CategoryStore.swift in Sources */,
 				956C3EB81F7993720086A76C /* SupplyDetailViewController.swift in Sources */,
 				956C3EBD1F7ABEA00086A76C /* WebsitesViewController.swift in Sources */,

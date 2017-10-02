@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let websiteStore = WebsiteStore()
   let favoriteStore = FavoriteStore()
   let categoryStore = CategoryStore()
+  let projectStore = ProjectStore()
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let suppliesNavController = tabController.viewControllers?[0] as! UINavigationController
     let websitesNavController = tabController.viewControllers?[1] as! UINavigationController
     let favoritesNavController = tabController.viewControllers?[2] as! UINavigationController
+    let projectsNavController = tabController.viewControllers?[3] as! UINavigationController
     
     let suppliesViewController = suppliesNavController.topViewController as! SuppliesViewController
     suppliesViewController.supplyStore = supplyStore
@@ -40,6 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let favoritesViewController = favoritesNavController.topViewController as! FavoritesViewController
     favoritesViewController.favoriteStore = favoriteStore
+    
+    let projectsViewController = projectsNavController.topViewController as! ProjectsViewController
+    projectStore.createProject(name: "Foo", date: Date.init(), imageKey: UUID().uuidString)
+    projectsViewController.projectStore = projectStore
     
     return true
   }
