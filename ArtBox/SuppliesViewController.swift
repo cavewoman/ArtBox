@@ -30,13 +30,31 @@ class SuppliesViewController: UITableViewController {
     tableView.reloadData()
   }
   
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    return categoryStore.allCategories.count
+  }
+  
+  override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    let sectionCategory = categoryStore.allCategories[section]
+    return sectionCategory.name
+  }
+  
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return supplyStore.allSupplies.count
+    let sectionCategory = categoryStore.allCategories[section]
+    if let name = sectionCategory.name {
+      let supplies = supplyStore.getSuppliesByCategoryName(name: name)
+      return supplies.count
+    } else {
+      return 0
+    }
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "SupplyCell", for: indexPath)
-    let supply = supplyStore.getAllSortedSupplies()[indexPath.row]
+    let supply: Supply
+    
+    let sectionCategory = categoryStore.allCategories[indexPath.section]
+    supply = sectionCategory.supplies[indexPath.row]
     
     cell.textLabel?.text = supply.name
     cell.detailTextLabel?.text = "\(supply.amount ?? 0.0)"

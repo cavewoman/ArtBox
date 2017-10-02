@@ -77,6 +77,11 @@ class SupplyStore {
   func getAllSortedSupplies() -> [Supply] {
     return allSupplies.sorted { $0.name! < $1.name! }
   }
+  
+  func getSuppliesByCategoryName(name: String) -> [Supply] {
+    var supplies = allSupplies.filter { $0.categoryName == name }
+    return supplies
+  }
 
   
 }
